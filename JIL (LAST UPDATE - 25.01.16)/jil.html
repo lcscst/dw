@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JIL - Dashboard</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-dark" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">JIL</a>
+      <a class="nav-link text-white" href="img/sobre.html">Sobre</a>
+    </div>
+  </nav>
+  <style>
+    body {
+      max-width: 1920px;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(to bottom, rgb(188, 188, 255), black);
+      color: white;
+    }
+    .header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+    }
+    .header h1 {
+      margin: 0;
+    }
+  </style>
+
+  <header class="header text-center">
+    <h1>Bem-vindo ao JIL</h1>
+    <p>Monitoramento e Gerenciamento de Redes</p>
+  </header>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Painel Principal</h2>
+    <p class="text-center">
+      Aqui você poderá acessar todas as funcionalidades para monitorar e gerenciar sua rede com praticidade.
+    </p>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Monitoramento</h5>
+            <p class="card-text">Visualize o status da sua rede em tempo real.</p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#monitoramentoModal">Acessar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cadastro de Máquinas</h5>
+            <p class="card-text">Gerencie as configurações do sistema.</p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#configModal">Cadastrar</button>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#machineListModal">Lista de Máquinas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Relatórios</h5>
+            <p class="card-text">Gere relatórios detalhados da rede.</p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#relatorioModal">Acessar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for monitoring -->
+  <div class="modal fade" id="monitoramentoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Monitoramento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mt-4">
+            <h4>Status da Rede:</h4>
+            <p>Uso de CPU: <span id="cpuUsage">0%</span></p>
+            <p>Uso de Memória: <span id="memoryUsage">0%</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for configuring devices -->
+  <div class="modal fade" id="configModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Configurar Dispositivos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="deviceForm">
+            <input type="text" class="form-control mb-2" placeholder="Nome do Dispositivo" required>
+            <input type="text" class="form-control mb-2" placeholder="IP do Dispositivo" required>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for machine list -->
+  <div class="modal fade" id="machineListModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Lista de Máquinas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="machineList" class="list-group">
+            <!-- Lista de máquinas será preenchida aqui -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for reports -->
+  <div class="modal fade" id="relatorioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Relatórios</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mt-4">
+            <h4>Relatório Simulado:</h4>
+            <p>Data: <span id="reportDate"></span></p>
+            <p>Uso de CPU: <span id="reportCpuUsage">0%</span></p>
+            <p>Uso de Memória: <span id="reportMemoryUsage">0%</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // Simulação de dados em tempo real
+    setInterval(() => {
+      const cpuUsage = Math.floor(Math.random() * 100);
+      const memoryUsage = Math.floor(Math.random() * 100);
+
+      document.getElementById('cpuUsage').textContent = `${cpuUsage}%`;
+      document.getElementById('memoryUsage').textContent = `${memoryUsage}%`;
+    }, 2000);
+
+    // Adicionar máquinas à lista
+    const machineForm = document.getElementById('deviceForm');
+    const machineList = document.getElementById('machineList');
+
+    machineForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const machineName = machineForm.querySelector('input[placeholder="Nome do Dispositivo"]').value;
+      const machineIP = machineForm.querySelector('input[placeholder="IP do Dispositivo"]').value;
+
+      const listItem = document.createElement('li');
+      listItem.className = 'list-group-item bg-dark text-white';
+      listItem.textContent = `${machineName} - ${machineIP}`;
+      machineList.appendChild(listItem);
+
+      machineForm.reset();
+    });
+
+    // Gerar relatório simulado
+    document.getElementById('relatorioModal').addEventListener('show.bs.modal', () => {
+      const reportDate = new Date().toLocaleString();
+      const reportCpuUsage = Math.floor(Math.random() * 100);
+      const reportMemoryUsage = Math.floor(Math.random() * 100);
+
+      document.getElementById('reportDate').textContent = reportDate;
+      document.getElementById('reportCpuUsage').textContent = `${reportCpuUsage}%`;
+      document.getElementById('reportMemoryUsage').textContent = `${reportMemoryUsage}%`;
+    });
+  </script>
+</body>
+</html>
+
