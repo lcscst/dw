@@ -1,4 +1,4 @@
-# MODIFICAÇÕES FEITAS
+# Projeto JIL - 2024.2
 
 1. Adicionado o PRISMA ORM ao projeto (diretório prisma/)
 2. Dentro do `prisma/` há o seguinte:
