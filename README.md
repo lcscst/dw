@@ -1,5 +1,8 @@
 # Projeto JIL - 2024.2
 
+![resultado_ping](https://github.com/user-attachments/assets/28419eae-b452-4357-a202-d1bc7008296b)
+
+
 # Comentários sobre as alterações do front-end para o back-end
 
 1. Adicionado o PRISMA ORM ao projeto (diretório prisma/)
