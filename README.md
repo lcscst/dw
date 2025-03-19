@@ -1,8 +1,23 @@
 # Projeto JIL - 2024.2
 
-![image](https://github.com/user-attachments/assets/0e854402-3f03-49f1-81b6-b29cdfa98dee)
+   - Tela de login (para usuários admin, root e teste).
+![image](https://github.com/user-attachments/assets/2d62bbe8-582c-4470-b7b8-1befb6137922)
 
-![image](https://github.com/user-attachments/assets/5ec9a98e-b2f8-4c39-95d2-0df6a9ee92a4)
+   - Tela inicial após autenticação no JIL com modals.
+![image](https://github.com/user-attachments/assets/a858619c-f2c3-44ea-a17d-4d88f95aa2cd)
+
+   - Ao clicar em "Cadastrar", inserção da máquina google.com de IP 8.8.8.8.
+     
+     ![image](https://github.com/user-attachments/assets/de189525-eac8-48a9-a41e-7810ae131ea1)
+
+
+   - Teste de ping para 8.8.8.8 (Google).
+     
+      ![image](https://github.com/user-attachments/assets/3ac1d560-8191-4889-b368-8f9b97d6c23e)
+
+   - Resultado da resposta do ping no browser.
+     
+      ![image](https://github.com/user-attachments/assets/5ec9a98e-b2f8-4c39-95d2-0df6a9ee92a4)
 
 
 
