@@ -55,7 +55,7 @@
 
 `npx prisma migrate dev --name init` + `npm install ping` + `npm run start`
 
-As pastas `node_modules` e `migration` e o arquivo `dev.db` devem ser removidos para forçar atualizações!
+As pastas `node_modules` e `migrations` e o arquivo `dev.db` devem ser removidos para forçar atualizações!
 
 # .env
 `DATABASE_URL="file:./dev.db"`
