@@ -1,6 +1,9 @@
 # Projeto JIL - 2024.2
 
-![resultado_ping](https://github.com/user-attachments/assets/28419eae-b452-4357-a202-d1bc7008296b)
+![image](https://github.com/user-attachments/assets/0e854402-3f03-49f1-81b6-b29cdfa98dee)
+
+![image](https://github.com/user-attachments/assets/5ec9a98e-b2f8-4c39-95d2-0df6a9ee92a4)
+
 
 
 # Comentários sobre as alterações do front-end para o back-end
