@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  password  String
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  Machines  Machine[]
+
+  @@map("users")
+}
+
+model Machine {
+  id   Int    @id @default(autoincrement())
+  name String
+  ip   String @unique
+  ram  Int
+  hd   Int
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId Int
+  Logs   Logs[]
+
+  @@map("machines")
+}
+
+model Logs {
+  id Int @id @default(autoincrement())
+
+  cpuUsage    Float
+  memoryUsage Float
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  machine   Machine @relation(fields: [machineId], references: [id])
+  machineId Int
+
+  @@map("logs")
+}
