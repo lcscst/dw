@@ -1,5 +1,7 @@
 # Projeto JIL - 2024.2
 
+# Comentários sobre as alterações do front-end para o back-end
+
 1. Adicionado o PRISMA ORM ao projeto (diretório prisma/)
 2. Dentro do `prisma/` há o seguinte:
    1. `migrations/`: scripts de configuração do DB gerado automaticamente pelo Prisma
