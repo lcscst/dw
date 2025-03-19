@@ -79,5 +79,10 @@
 As pastas `node_modules` e `migrations` e o arquivo `dev.db` devem ser removidos para forçar atualizações!
 
 # .env
-`DATABASE_URL="file:./dev.db"`
-`SECRET_KEY="ad51eb89-2944-4861-b9a7-8ae46b4a2d06"`
+- DATABASE_URL="file:./dev.db"
+- SECRET_KEY="ad51eb89-2944-4861-b9a7-8ae46b4a2d06"
+
+# CONTATOS
+- Igor Oliveira: `igor.teixeira@academico.ifpb.edu.br`
+- Júlio Araújo: `julio.estrela@academico.ifpb.edu.br`
+- Lucas Costa: `lucas-costa.lc@academico.ifpb.edu.br`
